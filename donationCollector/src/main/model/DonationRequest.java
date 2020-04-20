@@ -14,7 +14,7 @@ public class DonationRequest {
     private String date;
     private String NGOId;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "addressId")
     private Address addressId;
 

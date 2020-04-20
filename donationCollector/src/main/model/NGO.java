@@ -16,7 +16,7 @@ public class NGO {
     private String coverArea;
     private String description;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "addressId")
     private Address addressId;
 
